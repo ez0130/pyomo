@@ -11,7 +11,12 @@
 #     X(i,j) : Package amount moving from Factory i to Storage j
 #     Y(j,k) : Package amount moving from Storage j to Retailer k
 #    Objective Function:
-#     Minimum 
+#     Minimize all route total cost ( Package amount * cost to travel ) 
+#     # Objective: min ΣΣ (C_i,j * x_i,j) + ΣΣ (C_j,k * y_j,k)
+# More formal:
+# min  ∑ ∑ (C_i,j * x_i,j) + ∑ ∑ (C_j,k * y_j,k)
+#      i j                 j k
+
 
 '''
 
