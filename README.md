@@ -14,6 +14,3 @@
 #### Objective Function:
 ##### Minimize all route total cost ( Package amount * cost to travel ) 
 ##### Objective: min ΣΣ (C_i,j * x_i,j) + ΣΣ (C_j,k * y_j,k)
-##### More formal:
-##### min  ∑ ∑ (C_i,j * x_i,j) + ∑ ∑ (C_j,k * y_j,k)
-#####      i j                 j k
