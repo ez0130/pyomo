@@ -49,9 +49,10 @@ costs_wh_retail = {
 model.x = Var(model.I, model.J, domain=NonNegativeReals) # Factory -> WH
 model.y = Var(model.J, model.K, domain=NonNegativeReals) # WH -> Retailer
 
+
 # 5. 목적 함수 (Objective)
 def obj_rule(model):
-    transport_cost1 = sum(costs_factory_wh[i, j] * model.x[i, j] for i in model.I for j in model.I)
+    transport_cost1 = sum(costs_factory_wh[i, j] * model.x[i, j] for i in model.I for j in model.J)
     transport_cost2 = sum(costs_wh_retail[j, k] * model.y[j, k] for j in model.J for k in model.K)
     return transport_cost1 + transport_cost2
 model.objective = Objective(rule=obj_rule, sense=minimize)
@@ -85,6 +86,13 @@ for i in model.I:
     for j in model.J:
         if model.x[i, j].value > 0:
             print(f"Flow {i} -> {j}: {model.x[i, j].value}")
+
+print(model.y.pprint())
+print(model.x.pprint())
+print(model.I.pprint())
+print(model.J.pprint())
+print(model.K.pprint())
+            
 
 
 '''
