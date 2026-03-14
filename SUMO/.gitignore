@@ -1,0 +1,17 @@
+# 가상환경
+venv/
+.venv/
+env/
+
+# 파이썬 캐시
+__pycache__/
+*.py[cod]
+
+# SUMO 결과 파일 및 로그 (필요한 경우 추가)
+*.log
+*.xml.out
+trips.trips.xml
+
+# 운영체제 임시 파일
+.DS_Store
+Thumbs.db
