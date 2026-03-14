@@ -1,6 +1,6 @@
 # pyomo
 ## Core Algorithms of GLPK1. 
-#### Primal and Dual Simplex Method
+#### 1. Primal and Dual Simplex Method
 Used for: Solving LP (Linear Programming) problems
 Principle: It navigates through the vertices (corners) of the feasible region (a polyhedron formed by constraints) one by one, moving toward the vertex that improves the objective function value the most.
 Characteristics: This is a time-tested and highly stable method. GLPK intelligently selects between the 'Primal' and 'Dual' approaches based on the specific structure of the problem to maximize efficiency.
